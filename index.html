@@ -1,14 +1,14 @@
 <html>
   <head>
     <title>Sổ số kiến thiết - Nhà cái đến từ Pham Nương</title>
-    <link rel="stylesheet" href="main.css" type="text/css" />
-    <script type="text/javascript" src="./Winwheel.js"></script>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <script type="text/javascript" src="./js/Winwheel.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   </head>
   <body>
     <div align="center" style="margin-top: 10px">
-      <h1>Sổ số kiến thiết - Nhà cái đến từ Pham Nương</h1>
+      <h1>Sổ số kiến thiết - Nhà cái đến từ "Pham Nương"</h1>
       <br>
       <p>
        Bạn hãy chọn giải thưởng => chọn thanh lực quay (nếu không chọn thì sẽ hệ thống sẽ random lực) => Nhấn nút SPIN để quay
@@ -49,7 +49,7 @@
               <br />
               <img
                 id="spin_button"
-                src="spin_on.png"
+                src="./assets/spin_on.png"
                 alt="Spin"
                 onClick="startSpin();"
               />
@@ -183,7 +183,7 @@
         </tr>
       </table>
     </div>
-    <script src="./lotteries.js"></script>
+    <script src="./data/lotteries.js"></script>
     <script>
       //   window.addEventListener("load", (event) => {
 
@@ -214,7 +214,7 @@
         // } else {
         //   $("#"+localStorage.getItem("current")).addClass("pw5");
         // }
-        document.getElementById("spin_button").src = "spin_on.png";
+        document.getElementById("spin_button").src = "./assets/spin_on.png";
         document.getElementById("spin_button").className = "clickable";
         $("#"+localStorage.getItem("current")).addClass("pw4");
         for (let index = 0; index < 9; index++) {
@@ -265,8 +265,8 @@
       // This function is called when the segment under the prize pointer changes
       // we can play a small tick sound here like you would expect on real prizewheels.
       // -----------------------------------------------------------------
-      var audio = new Audio("tick.mp3"); // Create audio object and load tick.mp3 file.
-      var audio2 = new Audio("2.mp3");
+      var audio = new Audio("./assets/tick.mp3"); // Create audio object and load tick.mp3 file.
+      var audio2 = new Audio("./assets/2.mp3");
 
       function playSound() {
         // Stop and rewind the sound if it already happens to be playing.
@@ -351,7 +351,7 @@
           wheelPower = powerLevel;
 
           // Light up the spin button by changing it's source image and adding a clickable class to it.
-          document.getElementById("spin_button").src = "spin_on.png";
+          document.getElementById("spin_button").src = "./assets/spin_on.png";
           document.getElementById("spin_button").className = "clickable";
         }
       }
