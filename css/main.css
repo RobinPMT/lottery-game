@@ -9,7 +9,13 @@ Verison History:
     2015-09-26, Douglas McKechie
     - Minor updates for the 2.0 winwheel example.
 */
-
+html {
+    background: url(../assets/tet.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 body
 {
     font-family: arial;
@@ -20,7 +26,7 @@ td.the_wheel
 {
     background-image: url(../assets/wheel_back.png);
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
 /* Do some css reset on selected elements */
@@ -90,6 +96,7 @@ table.result  {
     background-color: #cccccc;
     cursor: pointer;
     border: 1px solid #333333;
+    /* align-self: center; */
 }
 table.result th {
     background-color: white;
@@ -106,7 +113,261 @@ table.result td {
 .item {
     border: 2px solid yellowgreen;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 5px;
     font-weight: bold;
+    /* display: table-cell; */
+}
+
+/* .row {
+    display: flex;
+    table-layout: fixed;
+    border-spacing: 2px;
+    justify-content: center;
+} */
+
+.tableWrap {
+    /* height: 500px; */
+    /* width:  521px; */
+    overflow: auto;
+    display: flex;
+    
+}
+
+.fixed {
+    display: flex;
+    justify-content: center;
+    /* min-height: 300px; */
+}
+
+
+@media (min-width: 1800px) {
+    .fixed {
+        min-height: 800px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .title {
+    color: #FFEC82;
+    font-size: 80px;
+    padding: 10px;
+} */
+
+/* CSS3 Neon Text Effect */
+.hero-bg.neon-hero .title {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0em 0em 3em #FFEC82,
+        0em 0em 2em #FFEC82,
+        1px 1px 5px #FFEC82,
+        0px 0px 15px #FFEC82,
+        1px 0px 0px white,
+        -1px 0px 2px rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+
+.hero-bg.neon-hero .title:hover {
+    color: #FFEC82;
+    text-shadow: 0em 0em 5em #FFEC82,
+        0em 0em 3em #FFEC82,
+        0em 0em 2em #FFEC82,
+        1px 1px 5px #FFEC82,
+        0px 0px 10px #FFEC82,
+        0px 0px 25px #FFEC82,
+        0px 0px 45px #FFEC82,
+        2px 1px 0px white,
+        -1px 0px 2px rgba(0, 0, 0, .5);
+}
+
+.hero-bg .title {
+    font-size: 1.8em;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+.hero-bg .hero-text {
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-bg .hero-image {
+    align-self: flex-end;
+}
+
+.hero-bg .hero-content,
+.hero-bg.hero-content {
+    flex-direction: row
+}
+
+.neon-hero {
+    font-size: 2.5em !important;
+}
+
+.neon-hero.hero-content>* {
+    z-index: 1;
+    position: relative
+}
+
+.hero-bg.neon-hero .title {
+    opacity: 1;
+    z-index: 1
+}
+
+.hero-bg.neon-hero:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0
+}
+
+/* RESET AND BASIC STYLES */
+
+
+.hero-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0
+}
+
+.hero-bg {
+    font-family: Source Sans Pro, Arial, sans-serif;
+    /* overflow: hidden; */
+    position: relative;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box
+}
+
+.hero-bg *,
+.hero-bg:after,
+.hero-bg:before {
+    box-sizing: inherit
+}
+
+.hero-bg .title {
+    color: hsla(0, 0%, 100%, .8);
+    font-weight: 300
+}
+
+
+
+.hero-bg .background-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.hero-bg .hero-text {
+    margin: 0;
+    /* max-width: 65%; */
+    padding: 0 30px;
+    position: relative
+}
+
+.neon {
+    font-family: neon_tubesregular, sans-serif
+}
+
+#attr {
+    position: absolute;
+    bottom: 10px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    letter-spacing: .2px;
+}
+
+#attr a {
+    color: rgba(255, 255, 255, .5);
+}
+
+#attr a:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+
+.logo b {
+    /* font: 400 19vh "Vibur"; */
+    /* color: #fee; */
+    /* text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #5464fa, 0 0 0.5em #777777, 0 0 0.1em #ff4444, 0 10px 3px #000; */
+}
+
+.logo b span {
+    animation: blink linear infinite 2s;
+}
+
+.logo b span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+}
+
+@keyframes blink {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    79% {
+        color: #e7706f;
+    }
+
+    80% {
+
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    82% {
+        color: #e7706f;
+        text-shadow: none;
+    }
+
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    92% {
+        color: #e7706f;
+        text-shadow: none;
+    }
+
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
 }
