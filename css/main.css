@@ -130,7 +130,7 @@ table.result td {
     /* height: 500px; */
     /* width:  521px; */
     overflow: auto;
-    display: flex;
+    /* display: flex; */
     
 }
 
@@ -174,7 +174,7 @@ table.result td {
         0px 0px 15px #FFEC82,
         1px 0px 0px white,
         -1px 0px 2px rgba(0, 0, 0, .5);
-    padding: 15px;
+    padding: 10px;
 }
 
 .hero-bg.neon-hero .title:hover {
